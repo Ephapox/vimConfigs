@@ -16,12 +16,12 @@ Place the contents of [mustang.vim](https://github.com/croaker/mustang-vim) into
 
 ### Installing YouCompleteMe
 
-1) Install cmake ```brew install cmake```
-2) Install macvim
+1. Install cmake ```brew install cmake```
+2. Install macvim
 	* ```export PATH=/usr/local/bin:$PATH```
 	* ```brew update```
 	* ```brew install vim && brew install macvim```
 	* ```ln -s /usr/local/bin/mvim vim```
-3) clone YouCompleteMe to ~/.vim/bundle
-4) run ```git submodule update --init --recursive``` in ~/.vim/bundle/YouCompleteMe
-5) run ```./install.py --clang-completer``` in ~/.vim/bundle/YouCompleteMe
+3. clone YouCompleteMe to ~/.vim/bundle
+4. run ```git submodule update --init --recursive``` in ~/.vim/bundle/YouCompleteMe
+5. run ```./install.py --clang-completer``` in ~/.vim/bundle/YouCompleteMe
