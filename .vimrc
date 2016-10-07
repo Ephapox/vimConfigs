@@ -60,6 +60,7 @@ set wildignore=*.swp " ignore swp files
 set clipboard=unnamed " yank will copy to system clipboard
 set pastetoggle=<F5> " F5 in insert allows for pasting w/o indent
 set mouse=a
+set syntax=javascript
 
 filetype plugin indent on
 
