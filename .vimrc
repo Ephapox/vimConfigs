@@ -60,7 +60,6 @@ set wildignore=*.swp " ignore swp files
 set clipboard=unnamed " yank will copy to system clipboard
 set pastetoggle=<F5> " F5 in insert allows for pasting w/o indent
 set mouse=a
-set syntax=javascript
 
 filetype plugin indent on
 
@@ -96,3 +95,9 @@ if has("autocmd")
     \   exe "normal g`\"" |
     \ endif
 endif " has("autocmd")
+
+" Ignore some folders and files for CtrlP indexing
+let g:ctrlp_custom_ignore = {
+  \ 'dir':  '\.git$\|\.sass-cache$|\.hg$\|\.svn$\|\.yardoc\|public$|log\|tmp$|node_modules$',
+  \ 'file': '\.so$\|\.dat$|\.DS_Store$'
+  \ }
