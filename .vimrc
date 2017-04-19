@@ -5,6 +5,8 @@ call pathogen#infect()
 " leader key from \ => ,
 let mapleader=","
 
+let g:javascript_plugin_jsdoc=1
+
 " Plugins
 set runtimepath^=~/.vim/bundle/ctrlp.vim
 
@@ -26,7 +28,9 @@ nmap <silent> <leader>sv :so $MYVIMRC<CR>
 nnoremap ; :
 " clears search buffer when ,/
 nmap <silent> ,/ :nohlsearch<CR>
+
 noremap <C-N> :NERDTreeToggle<CR>
+autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTree") && b:NERDTree.isTabTree()) | q | endif
 
 " prevents arrow keys
 map <up> <nop>
@@ -36,6 +40,17 @@ map <right> <nop>
 " movement keys allow wrapped line navigation
 nnoremap j gj
 nnoremap k gk
+
+" maps pane navigation to shortcut 
+" ctrl-w + j => ctrl-j
+nnoremap <C-J> <C-W><C-J>
+nnoremap <C-K> <C-W><C-K>
+nnoremap <C-L> <C-W><C-L>
+nnoremap <C-H> <C-W><C-H>
+" split panes down for vertical
+" split panes right for horizontal
+set splitbelow
+set splitright
 
 " Options
 " Indenting Options
@@ -68,6 +83,7 @@ filetype plugin indent on
 if has("autocmd")
   "" *.md should be markdown
   autocmd BufRead,BufNewFile *.md set filetype=mkd
+  autocmd VimEnter * IndentGuidesEnable
 
   " Enable file type detection.
   " Use the default filetype settings, so that mail gets 'tw' set to 72,
