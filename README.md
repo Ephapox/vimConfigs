@@ -1,5 +1,22 @@
 # VimConfigs
 
+### Instructions
+
+1) Install [Pathogen](https://github.com/tpope/vim-pathogen) for bundling your plugins.
+2) Place ~/.vim and ~/.vimrc in your home directory.
+3) Install all the plugins below to ~/.vim/bundle/
+
+### .vimrc changes
+
+* `,ev` will open your .vimrc
+* `,sv` will source your .vimrc
+* `:` is mapped to `;` so you don't have to hold shift, save keystrokes FTW
+* Arrow keys cannot be used in command mode (use HJKL), they do work in insert mode.
+* CTRL-n for NERDTREE
+* CTRL-p for ctrlp
+* Use `let g:ctrlp_custom_ignore` in .vimrc for ignoring files in ctrlp
+* Leader key `/` is mapped to `,`
+
 ### Colorscheme
 1) Place any colorscheme files in ~/.vim/colors/
 2) Write the name of the colorscheme in .vimrc
@@ -18,9 +35,9 @@ endif
 * [tern_for_vim](https://github.com/ternjs/tern_for_vim)
 * [emmet-vim](https://github.com/mattn/emmet-vim)
 * [ctrlp](https://github.com/kien/ctrlp.vim)
-* [YouCompleteMe](https://github.com/Valloric/YouCompleteMe)
 * [vim-indent-guides](https://github.com/nathanaelkane/vim-indent-guides)
 * [syntastic](https://github.com/vim-syntastic/syntastic)
+* [YouCompleteMe](https://github.com/Valloric/YouCompleteMe) (Optional, see below for instructions)
 
 ### Installing YouCompleteMe
 
