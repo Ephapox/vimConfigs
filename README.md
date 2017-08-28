@@ -1,7 +1,13 @@
 #VimConfigs
 
 ### Colorscheme
-Place the contents of [mustang.vim](https://github.com/croaker/mustang-vim) into ~/.vim/colors/mustang.vim
+1) Place any colorscheme files in ~/.vim/colors/
+2) Write the name of the colorscheme in .vimrc
+```
+if &t_Co >= 256 || has("gui_running")
+	colorscheme <COLOR_SCHEME_NAME>
+endif
+```
 
 ### Plugins
 * [nerdtree](https://github.com/scrooloose/nerdtree)
@@ -13,6 +19,8 @@ Place the contents of [mustang.vim](https://github.com/croaker/mustang-vim) into
 * [emmet-vim](https://github.com/mattn/emmet-vim)
 * [ctrlp](https://github.com/kien/ctrlp.vim)
 * [YouCompleteMe](https://github.com/Valloric/YouCompleteMe)
+* [vim-indent-guides](https://github.com/nathanaelkane/vim-indent-guides)
+* [syntastic](https://github.com/vim-syntastic/syntastic)
 
 ### Installing YouCompleteMe
 

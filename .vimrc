@@ -2,6 +2,7 @@ set nocompatible
 call pathogen#helptags()
 call pathogen#infect()
 
+let g:syntastic_javascript_checkers=['eslint']
 " leader key from \ => ,
 let mapleader=","
 
@@ -11,7 +12,7 @@ let g:javascript_plugin_jsdoc=1
 set runtimepath^=~/.vim/bundle/ctrlp.vim
 
 if &t_Co >= 256 || has("gui_running")
-	colorscheme blackboard
+	colorscheme darkmate
 endif
 
 if &t_Co > 2 || has("gui_running")
@@ -29,6 +30,7 @@ nnoremap ; :
 " clears search buffer when ,/
 nmap <silent> ,/ :nohlsearch<CR>
 
+let NERDTreeIgnore=[]
 noremap <C-N> :NERDTreeToggle<CR>
 autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTree") && b:NERDTree.isTabTree()) | q | endif
 
@@ -113,7 +115,4 @@ if has("autocmd")
 endif " has("autocmd")
 
 " Ignore some folders and files for CtrlP indexing
-let g:ctrlp_custom_ignore = {
-  \ 'dir':  '\.git$\|\.sass-cache$|\.hg$\|\.svn$\|\.yardoc\|public$|log\|tmp$|node_modules$',
-  \ 'file': '\.so$\|\.dat$|\.DS_Store$'
-  \ }
+let g:ctrlp_custom_ignore = '\v[\/](node_modules|target|dist)|(\.(swp|ico|git|svn))$'
