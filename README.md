@@ -1,4 +1,4 @@
-#VimConfigs
+# VimConfigs
 
 ### Colorscheme
 1) Place any colorscheme files in ~/.vim/colors/
